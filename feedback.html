@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <style>
+        .mydiv5{
+            background-color: #90ee90;
+            text-align: center;
+            block-size: 100px;
+            margin-left: 50px;
+            margin-right: 50px;
+            font-size: 70px;
+        }
+    </style>
+    <div class="mydiv5">
+      <strong><h5>Provide your Feedback</h4></strong>
+       </div>
+        <p style="font-size: 20px;ali">Rate your Experience</p>
+        <input type="radio" id="bad" name="rate" value="bad">
+        <label for="bad">very bad </label>
+        <input type="radio" id="med" name="rate" value="med">
+        <label for="med">medidum</label>
+        <input type="radio" id="good" name="rate" value="good">
+        <label for="good">very good</label>
+      <br>
+
+<p style="font-size: 20px;"> Describe Your feedback</p>
+
+     <textarea rows="4" cols="50" name="comment" form="usrform"></textarea>
+
+     <form action=" " onsubmit="myFunction()">
+        First name: <input type="text" name="fname" >
+        Last Name: <input type="text" id="fname" onblur="myFunction1()">
+       <input type="submit" value="Submit">
+      </form>
+      
+      <script>
+      function myFunction() {
+        alert("The form was submitted");
+      }
+     function myFunction1() {
+     var x = document.getElementById("fname");
+     x.value = x.value.toUpperCase();
+}
+      </script>
+      </head>
+      
+<p>Select your country.</p>
+
+<select id="mySelect" onchange="myFunction2()">
+  <option value="INDIA">India</option>
+  <option value="USA">Usa</option>
+  <option value="RUSSIA">Russia</option>
+  <option value="NORWAY">Norway</option>
+</select>
+
+<p id="country"></p>
+
+<script>
+function myFunction2() {
+  var x = document.getElementById("mySelect").value;
+  document.getElementById("country").innerHTML = "You selected: " + x;
+}
+</script>
+</html>
